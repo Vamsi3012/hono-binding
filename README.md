@@ -98,42 +98,9 @@ ssh root@${YOUR_BOARD_IP} afm-util start ${APP_NAME}@${APP_VERSION}
  
 
 ## TEST
-
- 
-
-### AGL
-
- 
-
-```bash
-
-export YOUR_BOARD_IP=192.168.1.X
-
-export PORT=8000
-
-ssh root@${YOUR_BOARD_IP} afb-daemon --ws-client=unix:/run/user/0/apis/ws/hono --port=${PORT} --token='x' -v
-
- 
-
-#On an other terminal
-
-ssh root@${YOUR_BOARD_IP} afb-client-demo -H 127.0.0.1:${PORT}/api?token=x hono list
-
-#or
-
-curl http://${YOUR_BOARD_IP}:${PORT}/api/hono/list?token=x
-
-#For a nice display
-
-curl http://${YOUR_BOARD_IP}:${PORT}/api/hono/list?token=x 2>/dev/null | python -m json.tool
-
-```
-
  
 
 ### Native Linux
-
- 
 
 For native build you need to have tools **afb-daemon**.
 
@@ -142,17 +109,15 @@ You can build it by your self [app-framework-binder][app-framework-binder], or u
  
 
 ```bash
-
+#Start the binding
 afb-daemon --port=1234  --binding=hono_root_directory/build/package/lib/hono.so --token=1
 
  
 
 #On a client shell
-
 afb-client-demo -H ws://localhost:1234/api?token=1
 
 #For listing all available verbs:
-
 hono list
 
 #On execution, the output is as shown below. the binding can register a device, send event and telemetry data. However, this binding does not support the authentication of the devices. Thus this has to be done using the API given here https://www.eclipse.org/hono/component/device-registry/#using-the-credentials-api-via-http
