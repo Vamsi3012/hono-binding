@@ -178,7 +178,7 @@ ON-REPLY 1:hono/list: OK
 ```
 
  
-#For testing the bindings on your linux desktop, the app-framework-binder has to be installed on your desktop. For information on installing the binder, follow the link: https://en.opensuse.org/LinuxAutomotive
+#For testing the bindings on your linux desktop, the app-framework-binder has to be installed on your desktop. For information on installing the binder, follow the link: 
 [opensuse.org/LinuxAutomotive]:https://en.opensuse.org/LinuxAutomotive
 
 [app-framework-binder]:https://gerrit.automotivelinux.org/gerrit/#/admin/projects/src/app-framework-binder
