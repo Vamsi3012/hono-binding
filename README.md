@@ -7,9 +7,9 @@ AGL binding to communicate with Eclipse hono instance via REST adapter
 
 ```bash
 
-git clone
+git clone https://github.com/Vamsi3012/hono-binding.git
 
-cd hono
+cd hono-service
 
 ```
 
@@ -21,7 +21,7 @@ cd hono
 
 ```bash
 
-#If the SDK is already installed then setup your build environement
+#If the SDK is already installed in the XDS server, then setup your build environement.
 
 ./xdt/sdk/environment-setup-corei7-64-agl-linux
 
@@ -37,7 +37,7 @@ chmod +x poky-agl-glibc-x86_64-agl-demo-platform-crosssdk-corei7-64-toolchain-4.
 
 ./poky-agl-glibc-x86_64-agl-demo-platform-crosssdk-corei7-64-toolchain-4.0.2.sh
 
-#When prompted, simply install in the default location.
+#When prompted, simply install the SDK in the default location.
 
 ./opt/poky-agl/4.0.2/environment-setup-corei7-64-agl-linux
 
@@ -60,8 +60,11 @@ cd root_dir_of_application
  
 
 ```bash
-
+#The below command builds the widget file necessary for deploying
 ./conf.d/autobuild/linux/autobuild package
+
+#The following command build the service which is just sufficient for testing the binding
+./conf.d/autobuild/linux/autobuild build
 
 ```
 
@@ -72,7 +75,6 @@ cd root_dir_of_application
 ## Deploy
 
  
-
 ### AGL
 
  

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="@PROJECT_NAME@" version="@PROJECT_VERSION@">
+  <name>@PROJECT_NAME@</name>
+  <icon src="PROJECT_ICON"/>
+  <content src="@PROJECT_NAME@-app.qml" type="@WIDGET_TYPE@"/>
+  <description>This hybrid app is used for getting CPU status</description>
+  <author>"@PROJECT_AUTHOR" &lt;"@PROJECT_AUTHOR_MAIL@"&gt;</author>
+  <license>"@PROJECT_LICENSE@"</license>
+  <feature name="urn:AGL:widget:provided-api">
+     <param name="cpu" value="ws" />
+  </feature>
+  <feature name="urn:AGL:widget:required-api">
+     <param name="lib/afb-cpu-hybrid-qml.so" value="local" />
+  </feature>
+</widget>
+
+
