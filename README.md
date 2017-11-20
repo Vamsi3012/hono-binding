@@ -81,17 +81,22 @@ cd root_dir_of_application
 
 ```bash
 
-export YOUR_BOARD_IP=192.168.1.X
-
-export APP_NAME=hono
 
 scp build/${APP_NAME}.wgt root@${YOUR_BOARD_IP}:/tmp
 
-ssh root@${YOUR_BOARD_IP} afm-util install /tmp/${APP_NAME}.wgt
+ssh root@${YOUR_BOARD_IP} 
 
+afm-util install /tmp/${APP_NAME}.wgt
+
+#This command confirms if the application has been installed. (Optional)
 APP_VERSION=$(ssh root@${YOUR_BOARD_IP} afm-util list | grep ${APP_NAME}@ | cut -d"\"" -f4| cut -d"@" -f2)
 
-ssh root@${YOUR_BOARD_IP} afm-util start ${APP_NAME}@${APP_VERSION}
+afm-util start ${APP_NAME}@${APP_VERSION}
+
+#if there is a need to check logs. On a new shell execute the following commands
+ssh root@${YOUR_BOARD_IP}
+
+journalctl -f 
 
 ```
 
@@ -173,13 +178,7 @@ ON-REPLY 1:hono/list: OK
 ```
 
  
-
- 
-
-And rebuild your application
-
- 
-
+#For testing the bindings on your linux desktop, the app-framework-binder has to be installed on your desktop. For information on installing the binder, follow the link: https://en.opensuse.org/LinuxAutomotive
 [opensuse.org/LinuxAutomotive]:https://en.opensuse.org/LinuxAutomotive
 
 [app-framework-binder]:https://gerrit.automotivelinux.org/gerrit/#/admin/projects/src/app-framework-binder
