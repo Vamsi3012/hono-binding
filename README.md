@@ -199,7 +199,7 @@ ON-REPLY 1:hono/list: OK
   "jtype":"afb-reply",
   "request":{
     "status":"success",
-    "info":"success",
+    "info":"Verb that lists all available verbs",
     "uuid":"ae2f6528-e0ad-44d5-a324-067b27d7b202"
   }
 }

@@ -412,7 +412,7 @@ void list(struct afb_req req)
 		i++;	
 		buffer[0]=NULL;
 	}
-	afb_req_success(req, list, "success");
+	afb_req_success(req, list, "Verb that lists all available verbs");
 }
 
 
