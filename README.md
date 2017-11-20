@@ -110,9 +110,8 @@ You can build it by your self [app-framework-binder][app-framework-binder], or u
 
 ```bash
 #Start the binding
-afb-daemon --port=1234  --binding=hono_root_directory/build/package/lib/hono.so --token=1
+afb-daemon --rootdir=/home/vgn5kor/Apps/hono/build/package --binding=/home/vgn5kor/Apps/hono/build/package/lib/afb-hono.so --port=1234 --tracereq=common --token=1 --verbose
 
- 
 
 #On a client shell
 afb-client-demo -H ws://localhost:1234/api?token=1
