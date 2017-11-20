@@ -111,21 +111,21 @@ export YOUR_BOARD_IP=192.168.1.X
 
 export PORT=8000
 
-ssh root@${YOUR_BOARD_IP} afb-daemon --ws-client=unix:/run/user/0/apis/ws/helloworld --port=${PORT} --token='x' -v
+ssh root@${YOUR_BOARD_IP} afb-daemon --ws-client=unix:/run/user/0/apis/ws/hono --port=${PORT} --token='x' -v
 
  
 
 #On an other terminal
 
-ssh root@${YOUR_BOARD_IP} afb-client-demo -H 127.0.0.1:${PORT}/api?token=x helloworld ping true
+ssh root@${YOUR_BOARD_IP} afb-client-demo -H 127.0.0.1:${PORT}/api?token=x hono list
 
 #or
 
-curl http://${YOUR_BOARD_IP}:${PORT}/api/helloworld/ping?token=x
+curl http://${YOUR_BOARD_IP}:${PORT}/api/hono/list?token=x
 
 #For a nice display
 
-curl http://${YOUR_BOARD_IP}:${PORT}/api/helloworld/ping?token=x 2>/dev/null | python -m json.tool
+curl http://${YOUR_BOARD_IP}:${PORT}/api/hono/list?token=x 2>/dev/null | python -m json.tool
 
 ```
 
@@ -154,6 +154,55 @@ afb-client-demo -H ws://localhost:1234/api?token=1
 #For listing all available verbs:
 
 hono list
+
+#On execution, the output is as shown below. the binding can register a device, send event and telemetry data. However, this binding does not support the authentication of the devices. Thus this has to be done using the API given here https://www.eclipse.org/hono/component/device-registry/#using-the-credentials-api-via-http
+ON-REPLY 1:hono/list: OK
+{
+  "response":[
+    {
+      "connect":"Connects a device to hono",
+      "commnad":"hono connect",
+      "Json Arguments":{
+        "host_name":"172.18.0.110",
+        "port":"28080",
+        "tenant_name":"DEFAULT_TENANT"
+      }
+    },
+    {
+      "sendt":"Sends Telemetry data to hono",
+      "command":"hono sendt",
+      "Json Arguments":{
+        "sensor_id":"sensor5",
+        "host_name":"172.18.0.110",
+        "port":"8080",
+        "tenant_name":"DEFAULT_TENANT",
+        "field":"engineSpeed",
+        "value":45.450000
+      }
+    },
+    {
+      "sende":"Sends event data to hono",
+      "command":"hono sende",
+      "Json Arguments":{
+        "sensor_id":"sensor5",
+        "host_name":"172.18.0.110",
+        "port":"8080",
+        "tenant_name":"DEFAULT_TENANT",
+        "field":"engineSpeed",
+        "event":"event_name"
+      }
+    },
+    {
+      "list":"lists all the verbs and their information."
+    }
+  ],
+  "jtype":"afb-reply",
+  "request":{
+    "status":"success",
+    "info":"success",
+    "uuid":"ae2f6528-e0ad-44d5-a324-067b27d7b202"
+  }
+}
 
  
 
