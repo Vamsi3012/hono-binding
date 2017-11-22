@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="hono" version="1.0">
+  <name>hono</name>
+  <icon src="icon_hybrid_qml_128.png"/>
+  <content src="lib/afb-hono.so" type="application/vnd.agl.service"/>
+  <description>AGL QML application example</description>
+  <author>Gunti, Vamsinag &lt;fixed-term.vamsinag.gunti@de.bosch.com&gt;</author>
+  <license>APL2.0</license>
+</widget>

@@ -125,7 +125,8 @@ afb-client-demo -H ws://localhost:1234/api?token=1
 hono list
 
 #On execution, the output is as shown below. the binding can register a device, send event and telemetry data. 
-#However, this binding does not support the authentication of the devices. Thus this has to be done using the API given here https://www.eclipse.org/hono/component/device-registry/#using-the-credentials-api-via-http
+#However, this binding does not support the authentication of the devices. 
+#Thus this has to be done using the API given here https://www.eclipse.org/hono/component/device-registry/#using-the-credentials-api-via-http
 ON-REPLY 1:hono/list: OK
 {
   "response":[

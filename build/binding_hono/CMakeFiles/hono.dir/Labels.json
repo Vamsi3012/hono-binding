@@ -1,0 +1,15 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "/home/vgn5kor/Apps/hono-binding/binding_hono/hono.c"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "BINDING" ],
+		"name" : "hono"
+	}
+}

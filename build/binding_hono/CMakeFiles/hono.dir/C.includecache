@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vgn5kor/Apps/hono-binding/binding_hono/hono.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+json-c/json.h
+-
+afb/afb-binding.h
+-
+

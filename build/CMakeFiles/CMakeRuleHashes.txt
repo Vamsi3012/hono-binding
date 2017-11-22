@@ -1,0 +1,13 @@
+# Hashes of file build rules.
+c146129afa01eeb68cc282f7116c541e CMakeFiles/autobuild
+14e00a34c90c75dcd7cd4843c94db22c CMakeFiles/hono_build_done
+dfaf48b4bd49da34da4f63deccab0dd1 CMakeFiles/packaging_wgt
+dfaf48b4bd49da34da4f63deccab0dd1 CMakeFiles/populate
+dfaf48b4bd49da34da4f63deccab0dd1 CMakeFiles/project_populate_hono
+c3becb0f6759078ad98c9cfba8a18ce6 CMakeFiles/remote-target-populate
+dfaf48b4bd49da34da4f63deccab0dd1 CMakeFiles/widget
+c3becb0f6759078ad98c9cfba8a18ce6 CMakeFiles/widget-target-install
+46debe3538f0157d1b545a9568bd6ab4 hono.wgt
+2b0ae62005c172f92c63db698fdf2716 package/bin
+18492ea1cf060b874b4a5946ebf2e449 package/config.xml
+9473263df123f1cc928d6d73aa517c6d package/lib/afb-hono.so
