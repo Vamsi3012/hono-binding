@@ -401,6 +401,7 @@ void list(struct afb_req req)
 	struct json_object * list = json_object_new_array();
 	int num_verbs = sizeof(verbs)/sizeof(afb_verb_v2);
 	int i = 0;
+	buffer[0]=NULL;
 	while(i < num_verbs){
 		strcat(buffer, "{\"");
 		strcat(buffer, verbs[i].verb);
