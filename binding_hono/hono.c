@@ -379,9 +379,9 @@ int preinit()
 }
 
 const afb_verb_v2 verbs[] = {
-	{.verb="connect", .callback=registerDeviceToHono, .info = "Connects a device to hono\", \"commnad\" : \"hono connect\", \"Json Arguments\" : {\"host_name\":\"172.18.0.110\", \"port\":\"28080\", \"tenant_name\":\"DEFAULT_TENANT\"}}" },
-	{.verb="sendt", .callback=sendTeleDataToHono, .info = "Sends Telemetry data to hono\", \"command\": \"hono sendt\", \"Json Arguments\" : {\"sensor_id\":\"sensor5\",\"host_name\":\"172.18.0.110\", \"port\":\"8080\", \"tenant_name\":\"DEFAULT_TENANT\", \"field\":\"engineSpeed\", \"value\": 45.45}}" },
-	{.verb="sende", .callback=sendTeleDataToHono, .info = "Sends event data to hono\", \"command\": \"hono sende\", \"Json Arguments\" : {\"sensor_id\":\"sensor5\",\"host_name\":\"172.18.0.110\", \"port\":\"8080\", \"tenant_name\":\"DEFAULT_TENANT\", \"field\":\"engineSpeed\", \"event\": \"event_name\"}}" },
+	{.verb="connect", .callback=registerDeviceToHono, .info = "Connects a device to hono\", \"commnad\" : \"hono connect\", \"Json Arguments\" : {\"host_name\":\"172.18.0.110\", \"device_id\":\"engineSpeed\", \"port\":\"28080\", \"tenant_name\":\"DEFAULT_TENANT\"}}" },
+	{.verb="sendt", .callback=sendTeleDataToHono, .info = "Sends Telemetry data to hono\", \"command\": \"hono sendt\", \"Json Arguments\" : {\"sensor_id\":\"sensor5\",\"host_name\":\"172.18.0.110\", \"port\":\"8080\", \"tenant_name\":\"DEFAULT_TENANT\", \"field\":\"Engine speed in rpm\", \"value\": 45.45}}" },
+	{.verb="sende", .callback=sendTeleDataToHono, .info = "Sends event data to hono\", \"command\": \"hono sende\", \"Json Arguments\" : {\"sensor_id\":\"sensor5\",\"host_name\":\"172.18.0.110\", \"port\":\"8080\", \"tenant_name\":\"DEFAULT_TENANT\", \"field\":\"Change in engine speed.\", \"event\": \"event_name\"}}" },
 	{.verb="list", .callback=list, .info = "lists all the verbs and their information.\"}}" }
 
 };
