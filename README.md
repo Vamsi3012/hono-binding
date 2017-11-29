@@ -135,6 +135,7 @@ ON-REPLY 1:hono/list: OK
       "commnad":"hono connect",
       "Json Arguments":{
         "host_name":"172.18.0.110",
+        "device_id":"engineSpeed",
         "port":"28080",
         "tenant_name":"DEFAULT_TENANT"
       }
@@ -147,7 +148,7 @@ ON-REPLY 1:hono/list: OK
         "host_name":"172.18.0.110",
         "port":"8080",
         "tenant_name":"DEFAULT_TENANT",
-        "field":"engineSpeed",
+        "field":"Engine speed in rpm",
         "value":45.450000
       }
     },
@@ -159,7 +160,7 @@ ON-REPLY 1:hono/list: OK
         "host_name":"172.18.0.110",
         "port":"8080",
         "tenant_name":"DEFAULT_TENANT",
-        "field":"engineSpeed",
+        "field":"Change in engine speed.",
         "event":"event_name"
       }
     },
@@ -171,7 +172,7 @@ ON-REPLY 1:hono/list: OK
   "request":{
     "status":"success",
     "info":"Verb that lists all available verbs",
-    "uuid":"ae2f6528-e0ad-44d5-a324-067b27d7b202"
+    "uuid":"2a7e8c95-e265-4fe0-839f-4e61e7ee5651"
   }
 }
 

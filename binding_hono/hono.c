@@ -1,6 +1,6 @@
 #define AFB_BINDING_VERSION 2
 #define _GNU_SOURCE
-#define MAXCPUS 16
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -368,7 +368,8 @@ void sendEventDataToHono(struct afb_req req){
 
 int init()
 {
-	AFB_NOTICE("Hono init.");
+	AFB_NOTICE("On Terminal 1: afb-daemon --rootdir=/root_directory/build/package --binding=/root_directory/build/package/lib/afb-hono.so --port=1234  --token= --tracereq=common --verbose");
+	AFB_NOTICE("On Terminal 2: afb-client-demo -H localhost:1236/api?token=1   then invoke the verb \"list\" by entering - hono list");
 	return 0;
 }
 
